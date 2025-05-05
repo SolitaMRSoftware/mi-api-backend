@@ -1,0 +1,16 @@
+
+# Entorno virtual
+venv/
+
+# Caché de Python
+__pycache__/
+
+# Archivos de configuración de VS Code
+.vscode/
+
+# Archivos sensibles
+database.py
+
+# Otros archivos ignorables
+*.pyc
+*.log
