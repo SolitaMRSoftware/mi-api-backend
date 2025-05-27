@@ -2,7 +2,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-
 SQLALCHEMY_DATABASE_URL = 'postgresql://tu_username:tu_password@host/database_name'
 #tu_usuario, tu_contraseña, localhost y nombre_base deben ser reemplazados con los reales
 
