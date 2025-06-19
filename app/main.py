@@ -8,10 +8,10 @@ import psycopg2
 from psycopg2.extras import RealDictCursor #para que me incluya el nombre de las columnas
 import time
 from sqlalchemy.orm import Session
-from sqlalchemy.sql.functions import mode #QUE HACE ESTA LIBRERIA?
+#from sqlalchemy.sql.functions import mode #QUE HACE ESTA LIBRERIA?
 from . import models, schemas, utils
 from .database import engine, get_db
-from .routers import post, users, auth
+from .routers import post, user, auth
 
 #este comando crea el motor y todos los modelos
 models.Base.metadata.create_all(bind=engine)
@@ -54,7 +54,7 @@ def find_index_post(id):
             return i
     
 app.include_router(post.router)
-app.include_router(users.router)
+app.include_router(user.router)
 app.include_router(auth.router)
 
 @app.get("/")
